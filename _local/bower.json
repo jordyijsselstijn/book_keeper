@@ -1,0 +1,27 @@
+{
+  "name": "book_keeper",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Jordy IJsselstijn <info@jordyijsselstijn.nl>"
+  ],
+  "license": "MIT",
+  "homepage": "www.jordyijsselstijn.nl",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "angular": "^1.5.6",
+    "angular-ui": "^0.4.0",
+    "angular-ui-router": "ui-router#^0.3.1",
+    "bootstrap": "^3.3.6",
+    "Materialize": "materialize#^0.97.6",
+    "angular-material": "^1.1.0"
+  }
+}

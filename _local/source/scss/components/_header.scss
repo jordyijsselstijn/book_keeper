@@ -1,0 +1,77 @@
+.header{
+  background: $headerColor;
+  height: 70px;
+}
+
+.header{
+  .__title{
+    font-family: PTSans, sans-serif;
+    font-size: 1.8em;
+    color: $textColor;
+    float: left;
+    font-weight:300;
+    margin: 17px;
+  }
+  .__button{
+    right: 0;
+    float: left;
+    margin: 22px;
+    width: 25px;
+  }
+  .__searchSection{
+    cursor: pointer;
+    float:right;
+    width: 20%;
+
+    .open{
+      opacity: 1;
+      margin-left: 30px;
+      margin-right: 30px;
+      width: 140px;
+    }
+    .__searchButton{
+
+
+      width: 35px;
+      margin: 40px;
+      margin-right: 100px;
+    }
+    input{
+      -webkit-appearance: none;
+      background: none;
+      border: 0;
+      outline: 0;
+      padding: 0;
+      text-align: left;
+      opacity: 0;
+      float:right;
+      font-family: PT Sans, sans-serif;
+      font-size: 1em;
+      color:$textColor;
+      height : 40px;
+      margin-top : 10px;
+      margin-left:0px;
+      margin-right: 0px;
+      width: 1px;
+      @include transition(margin-left 0.5s ease-in, width 0.5s, margin-right 0.5s ease-in, opacity 0.5s);
+    }
+
+    ::-webkit-input-placeholder {
+      color: $textColor;
+      font-family: PT Sans, sans-serif;
+      font-weight: 200;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+      color: $textColor;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+      color: $textColor;
+    }
+
+    :-ms-input-placeholder {
+      color: $textColor;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<md-dialog layout-margin style="min-width: 500px; max-width: 500px; ">
+    <md-dialog-content>
+    <h1 class="md-display-1">Add a new book</h1>
+    <hr flex>
+    <form layout-margin layout="column">
+        <div layout="column">
+            <md-input-container>
+                <label for="book.isbn">ISBN</label>
+                <input class="form-control"
+                       type="text"
+                       id="book.ISBN"
+                       data-ng-model="book.ISBN"
+                       placeholder="isbn"
+                       isbn
+                       required>
+            </md-input-container>
+        </div>
+        <div layout="column" id="book_content">
+            <div id="book_image_placeholder"></div>
+            <p class="md-title"  ng-show="bookFromResponse.title">Book: {{bookFromResponse.title}}</p>
+            <md-radio-group ng-model="selectedBook">
+                <book-from-list data-ng-repeat="book in listFromResponse">{{book}}</book-from-list>
+            </md-radio-group>
+        </div>
+        <md-button class="md-primary" data-ng-click="submit()">Add</md-button>
+    </form>
+    </md-dialog-content>
+</md-dialog>

@@ -1,0 +1,14 @@
+<md-card>
+    <md-card-title>
+        <md-card-title-text>{{book.title}}</md-card-title-text>
+        <md-card-title-media><img src="{{book.coverImage}}" alt="{{book.title}}"/></md-card-title-media>
+    </md-card-title>
+
+    <md-card-content>
+        {{book.coverText | limitTo: 100}}...
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="end center">
+        <md-button ui-sref="books.detail({bookId : book._id})">Go To Detail</md-button>
+    </md-card-actions>
+
+</md-card>

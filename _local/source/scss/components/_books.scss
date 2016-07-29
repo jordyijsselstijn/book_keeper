@@ -1,0 +1,31 @@
+.book{
+	.__image{
+		background: #D8D8D8;
+		border: 1px solid #979797;
+		box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+
+	}
+}
+
+.right.add-sign{
+	margin-top: 20px;
+	cursor:pointer;
+}
+
+.book{
+	background-size: 80px 60px;
+	background-repeat: no-repeat;
+
+	.__title{
+		font-family: PTSans, sans-serif;
+		font-size: 2em;
+		width : 50%;
+
+		margin-left: 10px;
+		margin-top: 10px;
+		line-height: 35px;
+		color: $textColorSec;
+	}
+
+
+}

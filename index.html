@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="book_keeper">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Keeper</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Pirate Bay">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link href="app/css/main.css" rel="stylesheet" type="text/css" media="screen,projection">
+    <script src="app/js/final.min.js"></script>
+
+
+</head>
+
+<body data-ng-controller="AppController">
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+            <i class="material-icons">menu</i>
+        </md-button>
+        <h2>
+            <span>Book Keeper</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Favorite">
+            <i class="material-icons">favorite</i>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="More">
+            <i class="material-icons">more_vert</i>
+        </md-button>
+    </div>
+</md-toolbar>
+<div layout="column" ui-view>
+
+
+</div>
+
+</body>
+</html>

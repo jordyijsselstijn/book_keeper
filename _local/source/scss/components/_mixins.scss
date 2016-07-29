@@ -1,0 +1,6 @@
+@mixin transition($transition1,$transition2,$transition3,$transition4) {
+  -webkit-transition: $transition1,$transition2,$transition3,$transition4;
+  -moz-transition: $transition1,$transition2,$transition3,$transition4;
+  -o-transition: $transition1,$transition2,$transition3,$transition4;
+  transition: $transition1,$transition2,$transition3,$transition4;
+}

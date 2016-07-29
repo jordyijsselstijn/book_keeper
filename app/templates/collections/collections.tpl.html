@@ -1,0 +1,24 @@
+<div>
+    <div layout="row">
+        <md-input-container>
+            <input class="form-control" type="text" data-ng-model="newCollection.name" placeholder="Collection name">
+            <md-button type="button" data-ng-click="addNewCollection()">Add</md-button>
+        </md-input-container>
+    </div>
+    <div layout="row">
+        <md-card style="width:290px;" data-ng-repeat="collection in collections">
+            <md-card-title>
+                <md-card-title-text><h1 class="md-body-2">{{collection.name}}</h1></md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p data-ng-if="collection.books.length == 1">Holds {{ collection.books.length }} item</p>
+                <p data-ng-if="collection.books.length != 1">Holds {{ collection.books.length }} items</p>
+            </md-card-content>
+            <md-card-actions>
+                <md-button ui-sref="collections.detail({collectionId : collection._id})">Detail</md-button>
+            </md-card-actions>
+        </md-card>
+
+    </div>
+
+</div>

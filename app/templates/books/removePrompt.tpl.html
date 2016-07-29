@@ -1,0 +1,12 @@
+<md-dialog layout-padding>
+
+    <md-dialog-content>
+        <h2 class="md-display-1">Pre-Rendered Dialog</h2>
+        <hr/>
+        <p>Are you sure you want to delete {{ bookToDelete.title }}?</p>
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button data-ng-click="confirm()">Yes</md-button>
+        <md-button data-ng-click="clearDialog()">Nope</md-button>
+    </md-dialog-actions>
+</md-dialog>

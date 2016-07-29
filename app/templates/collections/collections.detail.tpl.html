@@ -1,0 +1,67 @@
+<div layout="column" data-ng-init="getBooksForCollection()">
+
+    <div layout="column" layout-margin>
+        <div layout="row">
+            <div flex>
+                <h1 class="md-display-2">{{currentCollection.name}}</h1>
+                <small>Holds {{ books.length }} </small><small ng-if="books.length > 1 || books.length < 1 ">items</small><small ng-if="books.length == 1">item</small>
+            </div>
+
+            <div>
+                <div flex layout-align="end center">
+                    <md-fab-speed-dial md-open="toolbox.isOpen" md-direction="{{toolbox.selectedDirection}}"
+                                       ng-class="toolbox.selectedMode">
+                        <md-fab-trigger>
+                            <md-button aria-label="menu" class="md-fab md-warn">
+                                <md-icon>
+                                    <i class="material-icons">add</i>
+                                </md-icon>
+                            </md-button>
+                        </md-fab-trigger>
+                        <md-fab-actions>
+                            <md-button aria-label="Twitter" class="md-fab md-raised md-mini" data-ng-click="addByIsbn()">
+                                <md-tooltip md-direction="top" md-visible="tooltipVisible">Add by ISBN</md-tooltip>
+                                <md-icon aria-label="Add By ISBN">
+                                    <i class="material-icons">text_fields</i>
+                                </md-icon>
+                            </md-button>
+                            <md-button aria-label="Add full book" class="md-fab md-raised md-mini" data-ng-click="addNewBook()">
+                                <md-tooltip md-direction="top" md-visible="tooltipVisible">Add full book</md-tooltip>
+                                <md-icon aria-label="Add full book">
+                                    <i class="material-icons">add_circle</i>
+                                </md-icon>
+                            </md-button>
+                        </md-fab-actions>
+                    </md-fab-speed-dial>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span layout="row"><hr flex/></span>
+
+    <div layout="column" layout-margin>
+        <div layout="row" layout-wrap>
+            <md-card style="width:290px;" data-ng-repeat="book in books">
+                <img data-ng-if="book.coverImage != 'UNKNOWN'" data-ng-src="{{book.coverImage}}" alt="{{book.title}}" style="height:330px;"/>
+                <img data-ng-if="book.coverImage == 'UNKNOWN'" data-ng-src="app/img/placeholder.jpg" alt="{{book.title}}" style="height:330px;"/>
+                <md-card-title>
+                    <md-card-title-text><h1 class="md-body-2">{{book.title}}</h1></md-card-title-text>
+                </md-card-title>
+
+                <md-card-content>
+                    <p class="md-body-1">{{book.coverText | limitTo:100}}...</p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button ui-sref="books.detail({bookId : book._id})">Detail</md-button>
+                    <md-button class="md-icon-button" aria-label="Clear">
+                        <md-icon aria-label="Share" data-ng-click="removeFromCollection(book._id)">
+                            <i class="material-icons">clear</i>
+                        </md-icon>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+</div>

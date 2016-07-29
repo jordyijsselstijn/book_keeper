@@ -1,0 +1,62 @@
+<md-dialog layout-margin style="max-width: 500px; ">
+<h1 class="md-display-1">Add a new book</h1>
+<hr flex>
+<form layout-margin layout="column">
+    <div layout="column">
+        <md-input-container>
+            <label for="book.title">Title</label>
+            <input type="text"
+                   id="book.title"
+                   name="book[title]"
+                   data-ng-model="book.title"
+                   placeholder="Title"
+                   required>
+        </md-input-container>
+        <md-input-container>
+            <label for="book.writer">Author</label>
+            <input type="text"
+                   id="book.writer"
+                   data-ng-model="book.writer"
+                   placeholder="Author"
+                   required>
+        </md-input-container>
+        <md-input-container>
+            <label for="book.genre">Genre</label>
+            <input type="text"
+                   id="book.genre"
+                   data-ng-model="book.genre"
+                   placeholder="Genre"
+                   required>
+        </md-input-container>
+        <md-input-container>
+            <label for="book.coverText">CoverText</label>
+            <textarea id="book.coverText"
+                      cols="10"
+                      rows="10"
+                      data-ng-model="book.coverText"
+                      placeholder="Genre"
+                      required></textarea>
+        </md-input-container>
+        <md-input-container>
+            <label for="book.isbn">ISBN</label>
+            <input class="form-control"
+                   type="text"
+                   id="book.ISBN"
+                   data-ng-model="book.ISBN"
+                   placeholder="isbn"
+                   isbn
+                   required>
+        </md-input-container>
+
+        <md-input-container>
+
+                <div class="btn">
+                    <span>File</span>
+                    <input type="file" id="imageInput" file-model="book.image">
+                </div>
+
+        </md-input-container>
+    </div>
+    <md-button class="md-primary" data-ng-click="submit()">Add</md-button>
+</form>
+</md-dialog>
